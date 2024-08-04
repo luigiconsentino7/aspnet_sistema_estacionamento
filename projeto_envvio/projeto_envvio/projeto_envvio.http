@@ -1,0 +1,6 @@
+@projeto_envvio_HostAddress = http://localhost:5134
+
+GET {{projeto_envvio_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
