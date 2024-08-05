@@ -1,10 +1,5 @@
 ﻿using Domain.Entities;
 using Domain.Models;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Service.Interfaces.Service
 {
@@ -12,8 +7,11 @@ namespace Service.Interfaces.Service
     {
         public List<User> GetAll();
         public User GetById(int id);
-        public User CreatUser(UserDTO request);
-        public User UpdateUser(int id, UserDTO request);
+        public User RegisterUser(UserDTO request);
+        public void UpdateUser(int id, UserDTO request);
         public void DeleteUser(int id);
+        public void DesactivateUser(int id);
+        public void ActivateUser(int id);
+        public User GetByEmail(string email);
     }
 }

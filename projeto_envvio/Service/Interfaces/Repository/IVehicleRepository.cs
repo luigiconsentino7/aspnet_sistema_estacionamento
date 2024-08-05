@@ -15,6 +15,7 @@ namespace Service.Interfaces.Repository
         public Vehicle CreateVehicle(VehicleDTO request);
         public Vehicle UpdateVehicle(int id, VehicleDTO request);
         public void DesactivateVehicle(int id);
+        public void ActivateVehicle(int id);
         public void DeleteVehicle(int id);
     }
 }

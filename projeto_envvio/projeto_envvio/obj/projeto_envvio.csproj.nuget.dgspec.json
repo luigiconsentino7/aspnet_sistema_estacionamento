@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\luigi\\OneDrive\\Documentos\\Luigi\\projeto_envvio\\projeto_envvio\\projeto_envvio\\projeto_envvio.csproj": {}
+    "C:\\Users\\luigi\\OneDrive\\Documentos\\Luigi\\Sistema.Estacionamento.Aspnet\\projeto_envvio\\projeto_envvio\\projeto_envvio.csproj": {}
   },
   "projects": {
-    "C:\\Users\\luigi\\OneDrive\\Documentos\\Luigi\\projeto_envvio\\projeto_envvio\\Domain\\Domain.csproj": {
+    "C:\\Users\\luigi\\OneDrive\\Documentos\\Luigi\\Sistema.Estacionamento.Aspnet\\projeto_envvio\\Domain\\Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\luigi\\OneDrive\\Documentos\\Luigi\\projeto_envvio\\projeto_envvio\\Domain\\Domain.csproj",
+        "projectUniqueName": "C:\\Users\\luigi\\OneDrive\\Documentos\\Luigi\\Sistema.Estacionamento.Aspnet\\projeto_envvio\\Domain\\Domain.csproj",
         "projectName": "Domain",
-        "projectPath": "C:\\Users\\luigi\\OneDrive\\Documentos\\Luigi\\projeto_envvio\\projeto_envvio\\Domain\\Domain.csproj",
+        "projectPath": "C:\\Users\\luigi\\OneDrive\\Documentos\\Luigi\\Sistema.Estacionamento.Aspnet\\projeto_envvio\\Domain\\Domain.csproj",
         "packagesPath": "C:\\Users\\luigi\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\luigi\\OneDrive\\Documentos\\Luigi\\projeto_envvio\\projeto_envvio\\Domain\\obj\\",
+        "outputPath": "C:\\Users\\luigi\\OneDrive\\Documentos\\Luigi\\Sistema.Estacionamento.Aspnet\\projeto_envvio\\Domain\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -43,6 +43,16 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
+          "dependencies": {
+            "AutoMapper.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[12.0.1, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[6.7.0, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -63,14 +73,14 @@
         }
       }
     },
-    "C:\\Users\\luigi\\OneDrive\\Documentos\\Luigi\\projeto_envvio\\projeto_envvio\\Infrastructure\\Infrastructure.csproj": {
+    "C:\\Users\\luigi\\OneDrive\\Documentos\\Luigi\\Sistema.Estacionamento.Aspnet\\projeto_envvio\\Infrastructure\\Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\luigi\\OneDrive\\Documentos\\Luigi\\projeto_envvio\\projeto_envvio\\Infrastructure\\Infrastructure.csproj",
+        "projectUniqueName": "C:\\Users\\luigi\\OneDrive\\Documentos\\Luigi\\Sistema.Estacionamento.Aspnet\\projeto_envvio\\Infrastructure\\Infrastructure.csproj",
         "projectName": "Infrastructure",
-        "projectPath": "C:\\Users\\luigi\\OneDrive\\Documentos\\Luigi\\projeto_envvio\\projeto_envvio\\Infrastructure\\Infrastructure.csproj",
+        "projectPath": "C:\\Users\\luigi\\OneDrive\\Documentos\\Luigi\\Sistema.Estacionamento.Aspnet\\projeto_envvio\\Infrastructure\\Infrastructure.csproj",
         "packagesPath": "C:\\Users\\luigi\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\luigi\\OneDrive\\Documentos\\Luigi\\projeto_envvio\\projeto_envvio\\Infrastructure\\obj\\",
+        "outputPath": "C:\\Users\\luigi\\OneDrive\\Documentos\\Luigi\\Sistema.Estacionamento.Aspnet\\projeto_envvio\\Infrastructure\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -91,11 +101,11 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\luigi\\OneDrive\\Documentos\\Luigi\\projeto_envvio\\projeto_envvio\\Domain\\Domain.csproj": {
-                "projectPath": "C:\\Users\\luigi\\OneDrive\\Documentos\\Luigi\\projeto_envvio\\projeto_envvio\\Domain\\Domain.csproj"
+              "C:\\Users\\luigi\\OneDrive\\Documentos\\Luigi\\Sistema.Estacionamento.Aspnet\\projeto_envvio\\Domain\\Domain.csproj": {
+                "projectPath": "C:\\Users\\luigi\\OneDrive\\Documentos\\Luigi\\Sistema.Estacionamento.Aspnet\\projeto_envvio\\Domain\\Domain.csproj"
               },
-              "C:\\Users\\luigi\\OneDrive\\Documentos\\Luigi\\projeto_envvio\\projeto_envvio\\Service\\Service.csproj": {
-                "projectPath": "C:\\Users\\luigi\\OneDrive\\Documentos\\Luigi\\projeto_envvio\\projeto_envvio\\Service\\Service.csproj"
+              "C:\\Users\\luigi\\OneDrive\\Documentos\\Luigi\\Sistema.Estacionamento.Aspnet\\projeto_envvio\\Service\\Service.csproj": {
+                "projectPath": "C:\\Users\\luigi\\OneDrive\\Documentos\\Luigi\\Sistema.Estacionamento.Aspnet\\projeto_envvio\\Service\\Service.csproj"
               }
             }
           }
@@ -110,6 +120,10 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "AutoMapper.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[12.0.1, )"
+            },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[8.0.7, )"
@@ -133,6 +147,10 @@
               "suppressParent": "All",
               "target": "Package",
               "version": "[8.0.7, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[6.7.0, )"
             }
           },
           "imports": [
@@ -155,14 +173,14 @@
         }
       }
     },
-    "C:\\Users\\luigi\\OneDrive\\Documentos\\Luigi\\projeto_envvio\\projeto_envvio\\projeto_envvio\\projeto_envvio.csproj": {
+    "C:\\Users\\luigi\\OneDrive\\Documentos\\Luigi\\Sistema.Estacionamento.Aspnet\\projeto_envvio\\projeto_envvio\\projeto_envvio.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\luigi\\OneDrive\\Documentos\\Luigi\\projeto_envvio\\projeto_envvio\\projeto_envvio\\projeto_envvio.csproj",
+        "projectUniqueName": "C:\\Users\\luigi\\OneDrive\\Documentos\\Luigi\\Sistema.Estacionamento.Aspnet\\projeto_envvio\\projeto_envvio\\projeto_envvio.csproj",
         "projectName": "projeto_envvio",
-        "projectPath": "C:\\Users\\luigi\\OneDrive\\Documentos\\Luigi\\projeto_envvio\\projeto_envvio\\projeto_envvio\\projeto_envvio.csproj",
+        "projectPath": "C:\\Users\\luigi\\OneDrive\\Documentos\\Luigi\\Sistema.Estacionamento.Aspnet\\projeto_envvio\\projeto_envvio\\projeto_envvio.csproj",
         "packagesPath": "C:\\Users\\luigi\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\luigi\\OneDrive\\Documentos\\Luigi\\projeto_envvio\\projeto_envvio\\projeto_envvio\\obj\\",
+        "outputPath": "C:\\Users\\luigi\\OneDrive\\Documentos\\Luigi\\Sistema.Estacionamento.Aspnet\\projeto_envvio\\projeto_envvio\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -183,11 +201,11 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\luigi\\OneDrive\\Documentos\\Luigi\\projeto_envvio\\projeto_envvio\\Domain\\Domain.csproj": {
-                "projectPath": "C:\\Users\\luigi\\OneDrive\\Documentos\\Luigi\\projeto_envvio\\projeto_envvio\\Domain\\Domain.csproj"
+              "C:\\Users\\luigi\\OneDrive\\Documentos\\Luigi\\Sistema.Estacionamento.Aspnet\\projeto_envvio\\Domain\\Domain.csproj": {
+                "projectPath": "C:\\Users\\luigi\\OneDrive\\Documentos\\Luigi\\Sistema.Estacionamento.Aspnet\\projeto_envvio\\Domain\\Domain.csproj"
               },
-              "C:\\Users\\luigi\\OneDrive\\Documentos\\Luigi\\projeto_envvio\\projeto_envvio\\Infrastructure\\Infrastructure.csproj": {
-                "projectPath": "C:\\Users\\luigi\\OneDrive\\Documentos\\Luigi\\projeto_envvio\\projeto_envvio\\Infrastructure\\Infrastructure.csproj"
+              "C:\\Users\\luigi\\OneDrive\\Documentos\\Luigi\\Sistema.Estacionamento.Aspnet\\projeto_envvio\\Infrastructure\\Infrastructure.csproj": {
+                "projectPath": "C:\\Users\\luigi\\OneDrive\\Documentos\\Luigi\\Sistema.Estacionamento.Aspnet\\projeto_envvio\\Infrastructure\\Infrastructure.csproj"
               }
             }
           }
@@ -202,6 +220,10 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "AutoMapper.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[12.0.1, )"
+            },
             "Microsoft.AspNetCore.Authentication.JwtBearer": {
               "target": "Package",
               "version": "[8.0.7, )"
@@ -236,7 +258,7 @@
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
-              "version": "[6.4.0, )"
+              "version": "[6.7.0, )"
             }
           },
           "imports": [
@@ -262,14 +284,14 @@
         }
       }
     },
-    "C:\\Users\\luigi\\OneDrive\\Documentos\\Luigi\\projeto_envvio\\projeto_envvio\\Service\\Service.csproj": {
+    "C:\\Users\\luigi\\OneDrive\\Documentos\\Luigi\\Sistema.Estacionamento.Aspnet\\projeto_envvio\\Service\\Service.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\luigi\\OneDrive\\Documentos\\Luigi\\projeto_envvio\\projeto_envvio\\Service\\Service.csproj",
+        "projectUniqueName": "C:\\Users\\luigi\\OneDrive\\Documentos\\Luigi\\Sistema.Estacionamento.Aspnet\\projeto_envvio\\Service\\Service.csproj",
         "projectName": "Service",
-        "projectPath": "C:\\Users\\luigi\\OneDrive\\Documentos\\Luigi\\projeto_envvio\\projeto_envvio\\Service\\Service.csproj",
+        "projectPath": "C:\\Users\\luigi\\OneDrive\\Documentos\\Luigi\\Sistema.Estacionamento.Aspnet\\projeto_envvio\\Service\\Service.csproj",
         "packagesPath": "C:\\Users\\luigi\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\luigi\\OneDrive\\Documentos\\Luigi\\projeto_envvio\\projeto_envvio\\Service\\obj\\",
+        "outputPath": "C:\\Users\\luigi\\OneDrive\\Documentos\\Luigi\\Sistema.Estacionamento.Aspnet\\projeto_envvio\\Service\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -290,8 +312,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\luigi\\OneDrive\\Documentos\\Luigi\\projeto_envvio\\projeto_envvio\\Domain\\Domain.csproj": {
-                "projectPath": "C:\\Users\\luigi\\OneDrive\\Documentos\\Luigi\\projeto_envvio\\projeto_envvio\\Domain\\Domain.csproj"
+              "C:\\Users\\luigi\\OneDrive\\Documentos\\Luigi\\Sistema.Estacionamento.Aspnet\\projeto_envvio\\Domain\\Domain.csproj": {
+                "projectPath": "C:\\Users\\luigi\\OneDrive\\Documentos\\Luigi\\Sistema.Estacionamento.Aspnet\\projeto_envvio\\Domain\\Domain.csproj"
               }
             }
           }
@@ -306,9 +328,17 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "AutoMapper.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[12.0.1, )"
+            },
             "Microsoft.AspNetCore.Authentication.JwtBearer": {
               "target": "Package",
               "version": "[8.0.7, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[6.7.0, )"
             },
             "System.IdentityModel.Tokens.Jwt": {
               "target": "Package",

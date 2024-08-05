@@ -18,6 +18,12 @@ namespace Infrastructure.Mappings
             builder.Property(x => x.Id)
                .IsRequired(true)
                .ValueGeneratedOnAdd();
+
+            builder.Property(x => x.IsAdmin)
+                .IsRequired(true);
+
+            builder.Property(x => x.IsSecondAdmin)
+                .IsRequired(true);
         }
     }
 }

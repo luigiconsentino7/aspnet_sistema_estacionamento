@@ -37,5 +37,10 @@ namespace Domain.Models
         {
             Status = vehicle.Status;
         }
+
+        public void ActivateVehicle(Vehicle vehicle)
+        {
+            Status = vehicle.Status;
+        }
     }
 }

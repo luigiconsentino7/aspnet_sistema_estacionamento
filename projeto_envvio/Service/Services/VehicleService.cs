@@ -37,6 +37,11 @@ namespace Service.Services
             _vehicleRepository.DesactivateVehicle(id);
         }
 
+        public void ActivateVehicle(int id)
+        {
+            _vehicleRepository.DesactivateVehicle(id);
+        }
+
         public void DeleteVehicle(int id)
         {
             _vehicleRepository.DeleteVehicle(id);

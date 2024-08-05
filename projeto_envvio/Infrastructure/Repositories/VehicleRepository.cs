@@ -62,6 +62,17 @@ namespace Infrastructure.Repositories
             }
         }
 
+        public void ActivateVehicle(int id)
+        {
+            var vehicle = _dbSet.Find(id);
+            if (vehicle != null)
+            {
+                vehicle.ActivateVehicle();
+                _appDbContext.Entry(vehicle).State = EntityState.Modified;
+                _appDbContext.SaveChanges();
+            }
+        }
+
         public void DeleteVehicle(int id)
         {
             var vehicle = _dbSet.Find(id);

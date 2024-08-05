@@ -1,27 +1,39 @@
-﻿using Domain.Entities;
+﻿using AutoMapper;
+using Domain.Entities;
 using Domain.Models;
+using Microsoft.AspNetCore.Identity;
 using Service.Interfaces.Repository;
 using Service.Interfaces.Service;
-using System;
-using System.Collections.Generic;
-using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace Service.Services
 {
-    public class UserService(IUserRepository userRepository) : IUserService
+    public class UserService(IUserRepository userRepository, IMapper mapper) : IUserService
     {
         private readonly IUserRepository _userRepository = userRepository;
+        private readonly IMapper _mapper = mapper;
 
-        public User CreatUser(UserDTO request)
+        public User RegisterUser(UserDTO request)
         {
-            return _userRepository.CreateUser(request);
+            var user = _mapper.Map<User>(request);
+            
+            if(request.Password  != null)
+            {
+                using var hmac = new HMACSHA512();
+                byte[] passwordHash = hmac.ComputeHash(Encoding.UTF8.GetBytes(request.Password));
+                byte[] passwordSalt = hmac.Key;
+
+                user.UpdatePassword(passwordHash, passwordSalt);
+            }
+            var newUser = _userRepository.RegisterUser(user);
+
+            return newUser;
         }
 
         public void DeleteUser(int id)
         {
-           _userRepository.DeleteUser(id);
+            _userRepository.DeleteUser(id);
         }
 
         public List<User> GetAll()
@@ -34,9 +46,24 @@ namespace Service.Services
             return _userRepository.GetById(id);
         }
 
-        public User UpdateUser(int id, UserDTO request)
+        public User GetByEmail(string email)
         {
-            return _userRepository.UpdateUser(id, request);
+            return _userRepository.GetByEmail(email);
+        }
+
+        public void UpdateUser(int id, UserDTO request)
+        {
+            _userRepository.UpdateUser(id, request);
+        }
+
+        public void DesactivateUser(int id)
+        {
+            _userRepository.DesactivateUser(id);
+        }
+
+        public void ActivateUser(int id)
+        {
+            _userRepository.ActivateUser(id);
         }
     }
 }

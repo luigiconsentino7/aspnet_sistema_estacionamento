@@ -4,20 +4,23 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 17.8.34525.116
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "projeto_envvio", "projeto_envvio\projeto_envvio.csproj", "{A00C9EF4-CA8E-4E58-BD64-C812315D4668}"
+	ProjectSection(ProjectDependencies) = postProject
+		{7CDA1BFF-90D3-4CDB-9529-F3CA907EBCD4} = {7CDA1BFF-90D3-4CDB-9529-F3CA907EBCD4}
+	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1 - Application", "1 - Application", "{09B75E27-0E53-4623-AE1A-A4F5E6BED899}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2 - Service", "2 - Service", "{9B73CAD4-B2F7-4C44-BF87-0B595F3A0B2D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Service", "Service\Service.csproj", "{7CDA1BFF-90D3-4CDB-9529-F3CA907EBCD4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Service", "Service\Service.csproj", "{7CDA1BFF-90D3-4CDB-9529-F3CA907EBCD4}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3 - Domain", "3 - Domain", "{58B5BDD0-D49F-4603-AA54-32A756ED93F4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domain", "Domain\Domain.csproj", "{9789D1BE-B9FE-48FB-90F7-787ECAF56388}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Domain", "Domain\Domain.csproj", "{9789D1BE-B9FE-48FB-90F7-787ECAF56388}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4 - Infrastructure", "4 - Infrastructure", "{62F3DDC8-159B-4CD5-A1BB-D6ED9E929F28}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infrastructure", "Infrastructure\Infrastructure.csproj", "{79748185-869B-4371-8CF9-16EC5D0DF589}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Infrastructure", "Infrastructure\Infrastructure.csproj", "{79748185-869B-4371-8CF9-16EC5D0DF589}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

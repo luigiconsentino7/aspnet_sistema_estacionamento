@@ -36,5 +36,10 @@ namespace Domain.Entities
         {
             Status = false;
         }
+
+        public void ActivateVehicle()
+        {
+            Status = true;
+        }
     }
 }

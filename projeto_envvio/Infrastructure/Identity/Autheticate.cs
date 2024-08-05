@@ -1,4 +1,5 @@
 ﻿using Domain.Account;
+using Domain.Entities;
 using Infrastructure.Data;
 using Microsoft.Extensions.Configuration;
 using Microsoft.IdentityModel.Tokens;
@@ -81,5 +82,7 @@ namespace Infrastructure.Identity
                 return true;
             }
         }
+
+
     }
 }

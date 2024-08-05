@@ -1,14 +1,14 @@
 ﻿using Domain.Models;
 using Microsoft.AspNetCore.Mvc;
-using Service.Interfaces.Repository;
+using Service.Interfaces.Service;
 
 namespace projeto_envvio.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
-    public class ParkingLotController(IParkingLotRepository parkingLotRepository) : Controller
+    public class ParkingLotController(IParkingLotService parkingLotService) : Controller
     {
-        private readonly IParkingLotRepository _parkingLotRepository = parkingLotRepository;
+        private readonly IParkingLotService _parkingLotService = parkingLotService;
 
         [HttpPost]
         [Route("CreateParkingLot")]
@@ -17,7 +17,7 @@ namespace projeto_envvio.Controllers
         {
             if (request != null)
             {
-                _parkingLotRepository.CreateParkingLot(request);
+                _parkingLotService.CreateParkingLot(request);
             }
 
             return Created();
@@ -28,7 +28,7 @@ namespace projeto_envvio.Controllers
         [ProducesResponseType(typeof(List<ParkingLotDTO>), 200)]
         public IActionResult GetAll()
         {
-            var parkingLot = _parkingLotRepository.GetAll();
+            var parkingLot = _parkingLotService.GetAll();
 
             if (parkingLot != null)
             {
@@ -45,7 +45,7 @@ namespace projeto_envvio.Controllers
         [ProducesResponseType(typeof(ParkingLotDTO), 200)]
         public IActionResult GetById(int id)
         {
-            var parkingLot = _parkingLotRepository.GetById(id);
+            var parkingLot = _parkingLotService.GetById(id);
 
             if (parkingLot != null)
             {
@@ -61,11 +61,11 @@ namespace projeto_envvio.Controllers
         [Route("UpdateParkingLot")]
         public IActionResult UpdateParkingLot(int id, ParkingLotDTO request)
         {
-            var parkingLot = _parkingLotRepository.GetById(id);
+            var parkingLot = _parkingLotService.GetById(id);
 
             if (parkingLot != null)
             {
-                _parkingLotRepository.UpdateVehicle(id, request);
+                _parkingLotService.UpdateVehicle(id, request);
                 return Ok(parkingLot);
             }
             else
@@ -78,11 +78,11 @@ namespace projeto_envvio.Controllers
         [Route("DeleteParkingLot")]
         public IActionResult DeleteParkingLot(int id)
         {
-            var parkingLot = _parkingLotRepository.GetById(id);
+            var parkingLot = _parkingLotService.GetById(id);
 
             if (parkingLot != null)
             {
-                _parkingLotRepository.DeleteVehicle(id);
+                _parkingLotService.DeleteVehicle(id);
                 return NoContent();
             }
             else

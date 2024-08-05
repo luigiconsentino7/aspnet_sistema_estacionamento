@@ -11,11 +11,11 @@ namespace Infrastructure.Repositories
         private readonly AppDbContext _appDbContext = appDbContext;
         private readonly DbSet<User> _dbSet = appDbContext.Set<User>();
 
-        public User CreateUser(UserDTO request)
+        public User RegisterUser(User request)
         {
-            _dbSet.Add(new User(request));
+            _dbSet.Add(request);
             _appDbContext.SaveChanges();
-            return new User(request);
+            return request;
         }
 
         public void DeleteUser(int id)
@@ -37,7 +37,14 @@ namespace Infrastructure.Repositories
                 .Find(id);
         }
 
-        public User UpdateUser(int id, UserDTO request)
+        public User GetByEmail(string email)
+        {
+            return _appDbContext.Users
+                .Where(x => x.Email == email)
+                .FirstOrDefault();
+        }
+
+        public void UpdateUser(int id, UserDTO request)
         {
             var user = _dbSet.Find(id);
 
@@ -47,7 +54,28 @@ namespace Infrastructure.Repositories
             _appDbContext.Entry(user).State = EntityState.Modified;
             _appDbContext.SaveChanges();
 
-            return user;
+        }
+
+        public void DesactivateUser(int id)
+        {
+            var user = _dbSet.Find(id);
+            if (user != null)
+            {
+                user.DeactivateUser();
+                _appDbContext.Entry(user).State = EntityState.Modified;
+                _appDbContext.SaveChanges();
+            }
+        }
+
+        public void ActivateUser(int id)
+        {
+            var user = _dbSet.Find(id);
+            if (user != null)
+            {
+                user.ActivateUser();
+                _appDbContext.Entry(user).State = EntityState.Modified;
+                _appDbContext.SaveChanges();
+            }
         }
     }
 }
